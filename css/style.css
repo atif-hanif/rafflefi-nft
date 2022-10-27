@@ -1,0 +1,53 @@
+
+:root {
+    --white-color: #fff;
+    --btn-color: linear-gradient(to right, #F1521F , #EF392E);
+    --btn-bg: #EF392E;
+}
+
+body {
+    background-image: url(../images/back.webp);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: var(--white-color);
+}
+
+.coin-select {
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+.btn-orange {
+    background: var(--btn-color);
+    color: var(--white-color);
+    /* position: absolute;
+    right: 0; */
+    transform: translate(0%,0%);
+}
+
+.btn-orange:hover {
+    background-color: var(--white-color) !important;
+    border-color: var(--white-color) !important;
+    transition: all .3s ease;
+	color: var(--btn-bg);
+}
+
+.btn-orange::after{
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 0px;
+	height: 0px;
+	background: #fff;
+	transform-origin: left bottom;
+	transition-property: width height;
+	transition-duration: 0.3s;
+	z-index: -1;
+}
+
+.btn-orange:hover::after{
+	width: 100%;
+	height: 100%;
+}
